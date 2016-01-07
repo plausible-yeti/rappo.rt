@@ -1,28 +1,16 @@
-var db = require('../../db/config.js');
 var expect = require('chai').expect;
+var db = require('../../db/config.js');
+
 
 //require in individual test files
 var getAllClients = require('../../db/psql/getAllClients.js');
 
-describe('Persistant Node Client Server', function(){
+describe('Database Functions', function(){
 
   beforeEach( function (done) {
     db.connect();
     db.query('TRUNCATE salesperson, client, salesperson_client')
     .then(function(){
-      done();
-    });
-  });
-
-  afterEach( function () {
-    db.end();
-  })
-
-  //THIS TEST SHOULD BE UPDATED AS TABLES ARE ADDED
-  it('Should create initial tables if they do not exist on init', function(done){
-    db.query('\dt')
-    .then(function(data){
-      expect(results.length).to.equal(3);
       done();
     });
   });
