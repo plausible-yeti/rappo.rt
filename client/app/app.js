@@ -3,6 +3,7 @@
 angular.module('client-recon', [
 'ui.router',
 'client-recon.dashboard',
+'client-recon.appState',
 'client-recon.services'
 ])
 .config(function ($stateProvider, $httpProvider, $urlRouterProvider) {

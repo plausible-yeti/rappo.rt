@@ -1,10 +1,10 @@
 angular.module('client-recon.dashboard', [])
 
-.controller('DashboardController', function ($scope, ClientsApi) {
+.controller('DashboardController', function ($scope, ClientsApi, AppState) {
   // Your code here
 
   var dashboard = this;
-  dashboard.data = {};
+  dashboard.data = AppState.state;
 
   var initializeClients = function () {
     ClientsApi.getAll(1)
