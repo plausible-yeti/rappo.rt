@@ -20,9 +20,5 @@ app.use(express.static(path.join(__dirname ,'../client')));
 var port = 3000
 app.listen(port);
 
-<<<<<<< HEAD
-module.exports = app;
 
-=======
 module.exports = app;
->>>>>>> 893ff8f75899320e1fdabcc298253385387dd051
