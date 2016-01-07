@@ -1,5 +1,7 @@
 .floo*
 
+/node_modules/*
+
 *.graffle
 
 bower_components
