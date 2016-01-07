@@ -15,7 +15,6 @@ angular.module('client-recon.dashboard', [])
         console.error(error);
       });
   };
-  };
 
   initializeClients();
   });
