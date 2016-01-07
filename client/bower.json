@@ -1,0 +1,32 @@
+{
+  "name": "client-recon",
+  "homepage": "http://github.com/plausible-yetis/client-recon",
+  "authors": [
+    "Stephen Saunders",
+    "Alan Fu",
+    "Shafique Rashid",
+    "Rebecca Yang"
+  ],
+  "description": "Sales and account management relationship augmentation engine",
+  "main": "app.js",
+  "moduleType": [],
+  "keywords": [
+    "Node",
+    "Postgres",
+    "Express",
+    "Angular"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15"
+  }
+}
