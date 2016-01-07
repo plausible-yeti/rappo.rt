@@ -7,10 +7,11 @@ var getAllClientsString = "SELECT * FROM client INNER JOIN salesperson_client on
 module.exports = function(salesPersonId, callback){
     return db.query(getAllClientsString, salesPersonId)
     .then(function(clients){
-      callback(clients);
+      callback(null, clients);
       return clients;
     })
     .catch(function(error){
+      callback(error, null);
       return error;
     });
 }
