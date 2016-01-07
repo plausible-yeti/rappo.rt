@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "start": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,5 +25,12 @@
   "bugs": {
     "url": "https://github.com/urbantumbleweed/client-recon/issues"
   },
-  "homepage": "https://github.com/urbantumbleweed/client-recon#readme"
+  "homepage": "https://github.com/urbantumbleweed/client-recon#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "jwt-simple": "^0.4.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
 }
