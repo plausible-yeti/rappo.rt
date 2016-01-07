@@ -24,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/urbantumbleweed/client-recon/issues"
   },
-  "homepage": "https://github.com/urbantumbleweed/client-recon#readme"
+  "homepage": "https://github.com/urbantumbleweed/client-recon#readme",
+  "dependencies": {
+    "pg-promise": "^2.8.5"
+  }
 }
