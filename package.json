@@ -1,0 +1,28 @@
+{
+  "name": "client-recon",
+  "version": "0.0.1",
+  "description": "Sales and account management relationship augmentation engine",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urbantumbleweed/client-recon.git"
+  },
+  "keywords": [
+    "postgres",
+    "Express",
+    "Angular",
+    "Node"
+  ],
+  "author": "plausible-yetis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/urbantumbleweed/client-recon/issues"
+  },
+  "homepage": "https://github.com/urbantumbleweed/client-recon#readme"
+}
