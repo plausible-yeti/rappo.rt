@@ -6,5 +6,5 @@ var connectionString = process.env.DATABASE_URL||"postgres://localhost:5432/reco
 var db = pgp(connectionString);
 module.exports = db;
 
-//to test locally you must create a table in postgres
+//to test locally you must create a database 'recon' in postgres
 

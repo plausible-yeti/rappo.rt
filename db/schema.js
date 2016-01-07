@@ -1,15 +1,6 @@
 var db = require('./config.js');
 
 
-db.query("SELECT * FROM client INNERJOIN salesperson_client on (salesperson_client.client_id = client.client_id) WHERE salesperson_client.salesperson_id = 1")
-.then(function(data){
-  console.log('success');
-  console.log(data);
-})
-.catch(function(error){
-  console.log(error);
-});
-
 //SCHEMAS ---------------------------------------------
 //Cannot use USER as a table name || forbidden words: http://www.postgresql.org/docs/current/interactive/sql-keywords-appendix.html
 db.query("CREATE TABLE IF NOT EXISTS salesperson (salesperson_name VARCHAR(40),salesperson_id SERIAL PRIMARY KEY);")
@@ -30,6 +21,3 @@ db.query("CREATE TABLE IF NOT EXISTS salesperson (salesperson_name VARCHAR(40),s
   console.log(error);
 });
 
-
-
-module.exports.getAllClientsGivenUserQueryString = 'really long string $1';
