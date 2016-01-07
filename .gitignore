@@ -1,3 +1,5 @@
 .floo*
 
+/node_modules/*
+
 *.graffle
