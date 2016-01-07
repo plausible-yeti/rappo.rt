@@ -1,9 +1,11 @@
 angular.module('client-recon', [
-])
-.config(function ($routeProvider, $httpProvider) {
-  $routeProvider
-    .when('/', {
+'ui-router'])
+.config(function ($stateProvider, $httpProvider) {
+  $stateProvider
+    .state('dashboard', {
+      url: '/',
       templateUrl: 'app/dashboard/dashboard.html',
+      controllerAs: 'dashboard'
       controller: 'DashboardController'
     })
   } );
