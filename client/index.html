@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="client-recon">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,17 @@
   <link rel="stylesheet" href="">
 </head>
 <body>
-
+	<header>
+		<nav>
+			<ul>
+				<li><a ui-sref="dashboard">Dashboard</a></li>
+				<li><a ui-sref="">Client</a></li>
+				<li><a ui-sref="">Add Client</a></li>
+			</ul>
+		</nav>
+	</header>
+	<ui-view></ui-view>
   <script src="app/services/clientApi.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 </body>
 </html>
