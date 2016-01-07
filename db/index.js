@@ -10,10 +10,11 @@ var getAllClientsString = require('./psql/getAllClients.js');
 
 //export functions to interact with controller
 module.exports = {
-  getAllClients : function(salesPersonId){
-    salesPersonId = salesPersonId.toString();
-    return db.query(getAllClientsString+salesPersonId);
-  }
+  //gets all clients through db
+  getAllClients : require('./psql/getAllClients.js')
 
   //add additional functions here
 };
+
+
+
