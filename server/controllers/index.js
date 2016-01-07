@@ -1,9 +1,18 @@
+var db = require('../db');
+
 module.exports = {
 	dashboard: {
 		get: function(req,res){
 			var userid = req.params.user_id
+			db.getAllClients(userid, function(err,result){
+				if(err){
+					console.log(err)
+					throw err
+				} else {
+					res.JSON(result);	
+				}
+			});
 			// This is where we call the DB function for getting dashboard
-			// TO DO: Make sure you send a response
 			
 		}
 	},
@@ -29,3 +38,4 @@ module.exports = {
 		}
 	}
 }
+
