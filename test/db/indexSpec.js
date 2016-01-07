@@ -1,5 +1,5 @@
 var db = require('../../db/config.js');
-var expect = require('../../node_modules/chai/lib/chai').expect;
+var expect = require('chai').expect;
 
 //require in individual test files
 var getAllClients = require('../../db/psql/getAllClients.js');
