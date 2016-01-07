@@ -1,4 +1,6 @@
+
 var db = require('../db');
+
 
 module.exports = {
 	dashboard: {
@@ -13,7 +15,7 @@ module.exports = {
 				}
 			});
 			// This is where we call the DB function for getting dashboard
-			
+
 		}
 	},
 	user: {
@@ -37,5 +39,9 @@ module.exports = {
 			// This is where we call the DB function for updating a client
 		}
 	}
+
 }
+
+
+
 

@@ -2,7 +2,14 @@ var controller = require('../controllers');
 var helpers = require('../helpers')
 
 module.exports = function(app, express) {
+<<<<<<< HEAD
 	
+=======
+	app.get('/',function(req,res){
+		console.log("Hello, this worked!")
+	});
+
+>>>>>>> 893ff8f75899320e1fdabcc298253385387dd051
 	// ROUTE FOR DISPLAYING DASHBOARD
 	app.get('/api/users/:user_id/clients', function(req,res){
 		controller.dashboard.get(req,res);
