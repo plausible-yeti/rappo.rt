@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html ng-app="client-recon">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <link rel="stylesheet" href="">
-</head>
-<body>
-	<header>
-		<nav>
-			<ul>
-				<li><a ui-sref="dashboard">Dashboard</a></li>
-				<li><a ui-sref="">Client</a></li>
-				<li><a ui-sref="">Add Client</a></li>
-			</ul>
-		</nav>
-	</header>
-	<ui-view></ui-view>
-  <script src="app/services/clientApi.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a ui-sref="dashboard">Dashboard</a></li>
+          <li><a ui-sref="">Client</a></li>
+          <li><a ui-sref="">Add Client</a></li>
+        </ul>
+      </nav>
+    </header>
+    <ui-view></ui-view>
+    <!-- vendor libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <!-- <script src="bower_components/angular/angular.js"></script> -->
+    <!-- <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script> -->
+    <!-- application services -->
+    <script src="app/services/clientApi.js"></script>
+    <!-- application -->
+    <script src="app/app.js"></script>
+  </body>
 </html>
