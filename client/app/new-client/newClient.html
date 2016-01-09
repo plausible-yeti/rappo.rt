@@ -1,0 +1,27 @@
+
+<div ng-controller='NewClientController as newClientCtrl'>
+	<form name='newClientForm'>
+		<div class='clientNameInput'>
+			<span>Name</span>
+			<input type='text' ng-model='newClientCtrl.data.name'>
+		</div>
+		<div class='clientEmailInput'>
+			<span>Email</span>
+			<input type='text' ng-model='newClientCtrl.data.email'>
+		</div>
+		<div class='clientBirthdayInput'>
+			<span>Birthday</span>
+			<input type='date' ng-model='newClientCtrl.data.birthday'>
+		</div>
+		<div class='clientCompanyInput'>
+			<span>Company</span>
+			<input type='text' ng-model='newClientCtrl.data.company'>
+		</div>
+		<div class='clientFormSubmit'>
+			<input type='submit' ng-show='newClientForm.$valid' ng-click='newClientCtr.postClient'>
+		</div>
+	</form>
+	<div class='successfulPostNotification' ng-show='newClientCtrl.succesfulPost'>
+		New Client Successfully Added!
+	</div>
+</div>
