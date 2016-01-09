@@ -1,5 +1,8 @@
-
-
-	<div ng-repeat="client in dashboard.data.clients " ng-click="dashboard.storeClient($index)">
-		{{client}}
-	</div>
+Hello world!
+<div class='clientContainer' ng-repeat="client in dashboard.data.clients" ng-click="dashboard.storeClient($index)">
+	<img class='clientImage' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/005/03e/23d/1878a7c.jpg'></img>
+	<div class='clientName'>{{client.name}}</div>
+	<div class='clientEmail'>alan@gmail.com</div>
+	<div class='clientTitle'>Sr. Associate Director of Solutioning</div>
+	<div class='clientCompany'>Yahoo! Talent Solutions</div>
+</div>
