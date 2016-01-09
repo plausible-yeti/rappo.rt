@@ -1,6 +1,6 @@
 angular.module('client-recon.dashboard', [])
 
-.controller('DashboardController', function ($scope, ClientsApi, AppState) {
+.controller('DashboardController', function ($scope, ClientsApi, AppState, $state) {
   // Your code here
 
   var dashboard = this;
@@ -16,6 +16,15 @@ angular.module('client-recon.dashboard', [])
         console.error(error);
       });
   };
+
+  dashboard.storeClient = function(index) {
+    dashboard.currentClient = dashboard.data.clients[index]; 
+    AppState.state.currentClient = dashboard.currentClient;
+    console.log(AppState.state.currentClient);
+
+    //uncomment the below when client-profile view created.
+    //$state.go('client-profile');
+  }
 
   initializeClients();
   });
