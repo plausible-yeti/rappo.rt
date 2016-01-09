@@ -1,8 +1,8 @@
 // TO DO:
 // 1. Detect UserID from the AppState and put it in the ClientsApi.addOne()
 
-angular.module('client-recon.new-client', [])
 
+angular.module('client-recon.new-client', [])
 .controller('NewClientController', function ($scope, $timeout, ClientsApi, AppState) {
   // TEMPLATE FOR DATA
   this.data = {
