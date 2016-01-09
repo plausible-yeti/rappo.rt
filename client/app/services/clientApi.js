@@ -12,7 +12,15 @@ angular.module('client-recon.services', [])
         });
     }
 
+    var addOne = function(user_id, clientObj){
+      return $http.post('/api/users' + user_id + '/clients', clientObj)
+        .then(function(res){
+          return res.data;
+        })
+    }
+
     return {
-      getAll: getAll
+      getAll: getAll,
+      addOne: addOne
     }
   });
