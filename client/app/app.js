@@ -16,7 +16,7 @@ angular.module('client-recon', [
      controller: 'DashboardController'
    })
    .state('/client-profile', {
-      templateUrl: 'app/dashboard/client-profile.html',
+      templateUrl: 'app/client-profile/client-profile.html',
      controllerAs: 'client-profile',
      controller: 'clientProfileController'
    });
