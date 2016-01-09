@@ -1,5 +1,5 @@
 
 
-	<div ng-repeat="client in dashboard.data.clients">
+	<div ng-repeat="client in dashboard.data.clients " ng-click="dashboard.storeClient($index)">
 		{{client}}
 	</div>

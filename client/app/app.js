@@ -14,10 +14,10 @@ angular.module('client-recon', [
      templateUrl: 'app/dashboard/dashboard.html',
      controllerAs: 'dashboard',
      controller: 'DashboardController'
+   })
+   .state('/client-profile', {
+      templateUrl: 'app/dashboard/client-profile.html',
+     controllerAs: 'client-profile',
+     controller: 'clientProfileController'
    });
-   // .state('', {
-   //    templateUrl: 'app/dashboard/dashboard.html',
-   //   controllerAs: 'dashboard',
-   //   controller: 'DashboardController'
-   // });
  });
