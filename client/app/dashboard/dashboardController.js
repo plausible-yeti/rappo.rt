@@ -21,9 +21,7 @@ angular.module('client-recon.dashboard', [])
     dashboard.currentClient = dashboard.data.clients[index]; 
     AppState.state.currentClient = dashboard.currentClient;
     console.log(AppState.state.currentClient);
-
-    //uncomment the below when client-profile view created.
-    //$state.go('client-profile');
+    $state.go('client-profile.bio');
   }
 
   initializeClients();
