@@ -1,7 +1,7 @@
 // TO DO:
-// 1. Detect clientID from the AppState and put it in the ClientsApi.addOne()
+// 1. Detect UserID from the AppState and put it in the ClientsApi.addOne()
 
-angular.module('client-recon.newclient', [])
+angular.module('client-recon.new-client', [])
 
 .controller('NewClientController', function ($scope, $timeout, ClientsApi, AppState) {
   // TEMPLATE FOR DATA
@@ -18,7 +18,7 @@ angular.module('client-recon.newclient', [])
 
   this.postClient = function () {
 
-    ClientsApi.addOne( ***** CLIENT ID *******,newClient).then(function(res){
+    ClientsApi.addOne( ***** User ID *******,newClient).then(function(res){
       // CALLED AFTER SUCCESSFUL POST
       successfulPost = true;
       newClient.name = '';
