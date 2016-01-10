@@ -1,0 +1,2 @@
+INSERT INTO clients (client_name, client_email, client_birthday, client_company, client_zip, client_title) 
+VALUES ([$clientName, $clientemail, $clientbirthday, $clientcompany, $clientzipcode, $clienttitle, $image, $company]);
