@@ -17,8 +17,8 @@ angular.module('client-recon.new-client', [])
   var newClient = this.data;
 
   this.postClient = function () {
-
-    ClientsApi.addOne( ***** User ID *******,newClient).then(function(res){
+    //DETECT USER ID FROM APP STATE
+    ClientsApi.addOne( 1,newClient).then(function(res){
       // CALLED AFTER SUCCESSFUL POST
       successfulPost = true;
       newClient.name = '';
