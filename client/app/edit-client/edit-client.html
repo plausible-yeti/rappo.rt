@@ -1,0 +1,45 @@
+
+<!-- <div ng-controller='NewClientController as newClientCtrl'> -->
+<div class="container box-style">
+  <form class="new-client-form" name='editClientForm'>
+    <div class='row client-name-input'>
+      <div class="col-sm-12">
+        <h4>Name</h4>
+        <input class="client-input" type='text' placeholder="e.g.  John Smith" ng-model='editClientCtrl.newData.client_name'>
+      </div>
+    </div>
+    <div class='row client-email-input'>
+      <div class="col-sm-12">
+        <h4>Email</h4>
+        <input class="client-input" type='text' placeholder="name@company.com" ng-model='editClientCtrl.newData.client_email'>
+      </div>
+    </div>
+    <div class='row client-company-input'>
+      <div class="col-sm-12">
+        <h4>Company</h4>
+        <input class="client-input" type='text' placeholder="Company" ng-model='editClientCtrl.newData.client_company'>
+      </div>
+    </div>
+    <div class='row client-zipcode-input'>
+      <div class="col-sm-12">
+        <h4>Zipcode</h4>
+        <input class="client-input" type='text' placeholder="e.g.  94105" ng-model='editClientCtrl.newData.client_zipcode'>
+      </div>
+    </div>
+    <div class='row client-birthday-input'>
+      <div class="col-sm-12">
+        <h4>Birthday</h4>
+        <input class="client-input" type='date' ng-model='editClientCtrl.newData.client_birthday'>
+      </div>
+    </div>
+    <div class='row client-form-submit'>
+      <div class="col-sm-12">
+        <input class="client-input" type='submit' ng-show='editClientForm.$valid' ng-click='editClientCtrl.putClient()'>
+      </div>
+    </div>
+  </form>
+  <div class='successfulPostNotification' ng-show='editClientCtrl.succesfulPost'>
+    New Client Successfully Added!
+  </div>
+<div>
+<!-- </div> -->
