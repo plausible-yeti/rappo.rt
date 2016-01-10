@@ -3,15 +3,22 @@ var db = require('./config.js');
 
 //SCHEMAS ---------------------------------------------
 //Cannot use USER as a table name || forbidden words: http://www.postgresql.org/docs/current/interactive/sql-keywords-appendix.html
-db.query("CREATE TABLE IF NOT EXISTS salesperson (salesperson_name VARCHAR(40),salesperson_id SERIAL PRIMARY KEY);")
+db.query("CREATE TABLE IF NOT EXISTS salespersons (salesperson_name VARCHAR(40),salesperson_id SERIAL PRIMARY KEY);")
  .then(function(){
    console.log('sales created');
-   return db.query("CREATE TABLE IF NOT EXISTS client (client_name VARCHAR(40),client_id SERIAL PRIMARY KEY)");
+   return db.query("CREATE TABLE IF NOT EXISTS clients (client_name VARCHAR(40),"
+   	+ "client_title VARCHAR(40)," 
+   	+ "client_email VARCHAR(40)," 
+   	+ "client_zipcode VARCHAR(5)," 
+   	+ "client_birthday DATE,"
+   	+ "client_image VARCHAR(1000),"
+   	+ "client_company VARCHAR(40),"
+   	+ " client_id SERIAL PRIMARY KEY)");
    //if you want to add additional basic schema fields to the client such as info, add it to the string here
  })
  .then(function(){
-   console.log('client created');
-   return db.query("CREATE TABLE IF NOT EXISTS salesperson_client (salesperson_id int NOT NULL, client_id int NOT NULL, PRIMARY KEY (salesperson_id,client_id), FOREIGN KEY (salesperson_id) REFERENCES salesperson(salesperson_id), FOREIGN KEY (client_id) REFERENCES client(client_id));")
+   console.log('clients created');
+   return db.query("CREATE TABLE IF NOT EXISTS clients_salespersons (salesperson_id int NOT NULL, client_id int NOT NULL, PRIMARY KEY (salesperson_id,client_id), FOREIGN KEY (salesperson_id) REFERENCES salesperson(salesperson_id), FOREIGN KEY (client_id) REFERENCES client(client_id));")
  })
  .then(function(){
    console.log('user client join created');

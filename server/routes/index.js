@@ -1,6 +1,7 @@
+'use strict';
+
 var controller = require('../controllers');
 var helpers = require('../helpers');
-
 
 module.exports = function(app, express) {
 	// ROUTE FOR DISPLAYING DASHBOARD

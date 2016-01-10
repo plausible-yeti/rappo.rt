@@ -2,5 +2,6 @@
 
 module.exports = {
   // user: require('./user-model'),
-  Client: require('./client-model')
+  Client: require('./client-model'),
+  user: require('./user-model')
 };
