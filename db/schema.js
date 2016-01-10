@@ -18,7 +18,7 @@ db.query("CREATE TABLE IF NOT EXISTS salespersons (salesperson_name VARCHAR(40),
  })
  .then(function(){
    console.log('clients created');
-   return db.query("CREATE TABLE IF NOT EXISTS clients_salespersons (salesperson_id int NOT NULL, client_id int NOT NULL, PRIMARY KEY (salesperson_id,client_id), FOREIGN KEY (salesperson_id) REFERENCES salesperson(salesperson_id), FOREIGN KEY (client_id) REFERENCES client(client_id));")
+   return db.query("CREATE TABLE IF NOT EXISTS clients_salespersons (salesperson_id int NOT NULL, client_id int NOT NULL, PRIMARY KEY (salesperson_id,client_id), FOREIGN KEY (salesperson_id) REFERENCES salespersons(salesperson_id), FOREIGN KEY (client_id) REFERENCES clients(client_id));")
  })
  .then(function(){
    console.log('user client join created');
