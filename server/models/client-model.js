@@ -18,7 +18,7 @@ var Client = function () {
    */
   this.update = function(clientId, data){
     // take the data and make the SQL arguments
-    var init = { columns: [], values: []};
+    var init = { columns: [], values: [] };
     var query = _.reduce(data, function(acc, val, key) {
       acc.columns.push(key);
       acc.values.push(val);
@@ -30,6 +30,7 @@ var Client = function () {
     var values = query.values.join(', ');
 
     // performe the db transaction
+    // return a promise
     return db.query(editOne, [clientId, columns, values])
       .then(function(data){
         // return updated object to the caller
