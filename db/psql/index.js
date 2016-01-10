@@ -13,4 +13,3 @@ module.exports = {
   editOneClient: sqlLoad(path.join(__dirname, './edit-one-client')),
 };
 
-console.log(module.exports.editOneClient);

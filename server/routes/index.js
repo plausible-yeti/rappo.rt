@@ -1,5 +1,6 @@
 var controller = require('../controllers');
-var helpers = require('../helpers')
+var helpers = require('../helpers');
+
 
 module.exports = function(app, express) {
 	// ROUTE FOR DISPLAYING DASHBOARD
@@ -16,15 +17,17 @@ module.exports = function(app, express) {
 	app.get('/api/users/:user_id/clients/:client_id', function(req,res){
 		controller.client.get(req,res);
 	})
-	
+
 	// ROUTE FOR CREATING A NEW CLIENT
 	app.post('/api/users/:user_id/clients', function(req,res){
 		controller.client.post(req,res);
 	})
 
-	app.put('/api/users/:user_id/clients', function(req,res){
-		controller.client.put(req,res);
-	})
-	
-}
+  // ROUTE FOR UPDATING A CLIENT
+	app.put('/api/users/:user_id/clients/:client_id', controller.client.put);
 
+	// ROUTE FOR GETTING FEED FOR A PARTICULAR CLIENT
+	app.get('/api/users/:user_id/clients/:client_id/feed', function(req,res){
+		controller.feed.get(req,res);
+	})
+};
