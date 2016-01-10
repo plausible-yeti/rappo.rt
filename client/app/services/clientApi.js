@@ -13,14 +13,22 @@ angular.module('client-recon.services', [])
     }
 
     var addOne = function(user_id, clientObj){
-      return $http.post('/api/users' + user_id + '/clients', clientObj)
+      return $http.post('/api/users/' + user_id + '/clients', clientObj)
         .then(function(res){
           return res.data;
         })
     }
 
+    var editOne = function(user_id, editedClient){
+      return $http.put('/api/users/' + 1 + '/clients/' + editedClient.client_id, editedClient)
+        .then(function(res){
+          return res.data;
+        });
+    }
+
     return {
       getAll: getAll,
-      addOne: addOne
+      addOne: addOne,
+      editOne: editOne
     }
   });
