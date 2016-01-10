@@ -8,4 +8,4 @@ module.exports = {
 	dashboard: require('./dashboard-controller'),
   user: require('./user-controller'),
   client: require('./client-controller')
-}
+};
