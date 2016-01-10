@@ -1,9 +1,10 @@
 'use strict';
 var db = require('../../db');
+var Client = require('../models').client;
 
 /**
  * Controllers for the clients route
- * `/api/clients` and `/api/clients/:id`
+ * `/api/clients` and `/api/users/:id/clients/:client_id`
  * @type {Object}
  */
 module.exports = {
@@ -23,7 +24,14 @@ module.exports = {
     // This is where we call the DB function for creating a new client
   },
   put: function(req,res){
-    var user_id = req.params.user_id;
+    var clientId = req.params.clientId;
+    Client.update(clientId, req.body)
+      .then(function(client){
+        res.json(client);
+      })
+      .catch(function(err){
+        res.status(204).send(err);
+      });
     // This is where we call the DB function for updating a client
   }
 }
