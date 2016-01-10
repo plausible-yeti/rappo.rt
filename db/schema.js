@@ -11,7 +11,7 @@ db.query("CREATE TABLE IF NOT EXISTS salespersons (salesperson_name VARCHAR(40),
    	+ "client_email VARCHAR(40)," 
    	+ "client_zipcode VARCHAR(5)," 
    	+ "client_birthday DATE,"
-   	+ "client_image VARCHAR(40),"
+   	+ "client_image VARCHAR(1000),"
    	+ "client_company VARCHAR(40),"
    	+ " client_id SERIAL PRIMARY KEY)");
    //if you want to add additional basic schema fields to the client such as info, add it to the string here

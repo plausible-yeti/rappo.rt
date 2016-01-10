@@ -1,4 +1,4 @@
-var controller = require('../controllers');
+var controller = require('../controllers/index.js');
 var helpers = require('../helpers')
 
 module.exports = function(app, express) {

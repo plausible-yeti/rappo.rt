@@ -1,16 +1,20 @@
 //var db = require('../../db/psql/insertUser.js');
-var queryString = require('../../db/psql/index.js')
+var queryString = require('../../db/psql/index.js');
+var db = require('../../db/config.js');
 
-var insertUser = function(user, callback){
-
-	var queryParameters = [user.name, user.email, user.birthday, user.company, user.zipcode, user.title, user.image, user.company];
-
+module.exports.insertUser = function(user, callback){
+  console.log('in model, about to insert', user);
+  console.log('query string is', queryString.insertUser);
+	var queryParameters = [user.name, user.email, user.birthday, user.company, user.zipcode, user.title, user.image];
+  console.log('query length is', queryParameters.length);
     return db.query(queryString.insertUser, queryParameters)
     .then(function(client){
+      console.log('inserted client is', client);
       callback(null, client);
       return client;
     })
     .catch(function(error){
+      console.log('error inserting to db, error is:', err);
       callback(error, null);
       return error;
     });
