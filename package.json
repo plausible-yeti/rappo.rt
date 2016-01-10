@@ -30,8 +30,10 @@
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "jwt-simple": "^0.4.0",
+    "lodash": "^3.10.1",
     "path": "^0.12.7",
     "pg-promise": "^2.8.5",
+    "sql-load": "0.0.2",
     "url": "^0.11.0"
   },
   "devDependencies": {
