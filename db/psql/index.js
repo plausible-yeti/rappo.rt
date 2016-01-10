@@ -1,4 +1,6 @@
 'use strict';
+
+var sqlLoad = require('sql-load');
 /**
  * This is a directory of all the SQL strings that are used by the database.
  * To add a Query, create a sql file in the `psql/` directory and then require it
@@ -6,6 +8,6 @@
  * @type {Object}
  */
 module.exports = {
-  getAllClients: require('sql-load')('./get-all-clients'),
-  editOneClient: require('sql-load')('./edit-one-client'),
+  getAllClients: sqlLoad('./get-all-clients'),
+  editOneClient: sqlLoad('./edit-one-client'),
 };
