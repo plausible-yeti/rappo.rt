@@ -1,0 +1,51 @@
+.container {
+	max-width: 960px;
+}
+
+.client-container {
+	margin-left: 10px;
+	display: flex;
+	flex-direction: row;
+	max-width: 600px;
+	border-top-style:solid;
+	border-left-style:solid;
+	border-right-style:solid;
+	border-width:1px;
+	border-color:rgba(0,0,0,0.2);
+/*	border-style: solid;
+	border-width: 1px;*/
+	padding-bottom: 5px;
+}
+
+.client-container:last-child {
+	border-bottom-style:solid;
+	border-width:1px;
+	border-color:rgba(0,0,0,0.2);
+}
+.client-container:hover {
+	background-color: #f5f8fa;
+
+}
+
+.clientImage {
+	height: auto;
+	width: auto;
+	max-height: 100px;
+	max-width: 100px;
+	padding: 5px;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.clientInfo {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2;
+}
+
+.clientName {
+	font-weight:bold;
+
+}
+body {
+	background-color: #f5f8fa;;
+}
