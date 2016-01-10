@@ -8,7 +8,7 @@ angular.module('client-recon', [
 'client-recon.client-profile',
 'client-recon.client-profile.bio',
 'client-recon.new-client',
-//'client-recon.client-feed',
+'client-recon.client-profile.feed',
 
 ])
 .config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
@@ -33,12 +33,12 @@ angular.module('client-recon', [
         templateUrl: 'app/client-profile/bio/bio.html',
         controllerAs: 'bio',
         controller: 'BioController'
-      }//,
-      // 'feed':{
-      //   templateUrl: 'app/client-profile/bio/bio.html',
-      //   controllerAs: 'bio',
-      //   controller: 'BioController'
-      // }
+      },
+      'feed':{
+        templateUrl: 'app/client-profile/feed/feed.html',
+        controllerAs: 'feed',
+        controller: 'FeedController'
+      }
      }
    })
    .state('new-client', {

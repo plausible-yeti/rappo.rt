@@ -1,13 +1,15 @@
-<div class='container'>
-<div class='client-wrapper'>
-<div class='client-container row' ng-repeat="client in dashboard.data.clients" ng-click="dashboard.storeClient($index)">
-	<img class='clientImage' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/005/03e/23d/1878a7c.jpg'></img>
-	<div class='clientInfo'>
-		<div class='clientName'>{{client.client_name}}</div>
-		<div class='clientEmail'>alan@gmail.com</div>
-		<div class='clientTitle'>Sr. Associate Director of Solutioning</div>
-		<div class='clientCompany'>Yahoo! Talent Solutions</div>
-	</div>	
+
+<div class='client-wrapper container box-style'>
+  <div class='client-container row' ng-repeat="client in dashboard.data.clients" ng-click="dashboard.storeClient($index)">
+  	<div class="col-sm-2">
+      <img class='clientImage' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/005/03e/23d/1878a7c.jpg'></img>
+    </div>
+    <div class="col-sm-10 client-text-summary clientInfo">
+        <h4 class='clientName'>{{client.client_name}}</h4>
+        <a href="mailto:alan@gmail.com" class='clientEmail'>alan@gmail.com</a>
+        <div class='clientTitle'>Sr. Associate Director of Solutioning</div>
+        <div class='clientCompany'>Yahoo! Talent Solutions</div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
+
