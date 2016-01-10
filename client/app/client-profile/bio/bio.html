@@ -8,12 +8,11 @@
     <a href="mailto:alan@gmail.com" class="bio-email">alan@gmail.com</a>
   </div>
   <ul class="bio-profile-details">
-    <li class="bio-list-item"> Location: {{bio.data.currentClient.zipcode}} </li>
-    <li class="bio-list-item"> Birthday: {{bio.data.currentClient.birthday}} </li>
-    <li class="bio-list-item"> Company: {{bio.data.currentClient.company}}
+    <li class="bio-list-item"> Location: {{bio.data.currentClient.client_zipcode}} </li>
+    <li class="bio-list-item"> Birthday: {{bio.data.currentClient.client_birthday}} </li>
+    <li class="bio-list-item"> Company: {{bio.data.currentClient.client_company}}
     <!--Add list items here as more things populate -->
   </ul>
-
 </div>
 <div class="edit-bio">
   <a ui-sref="new-client">Edit</a>
