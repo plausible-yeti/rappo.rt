@@ -22,7 +22,7 @@ angular.module('client-recon.dashboard', [])
   dashboard.storeClient = function(index) {
     dashboard.currentClient = dashboard.data.clients[index]; 
     AppState.state.currentClient = dashboard.currentClient;
-    console.log(AppState.state.currentClient);
+    console.log('from dashboard',AppState.state.currentClient);
     $state.go('client-profile.bio');
   }
 
