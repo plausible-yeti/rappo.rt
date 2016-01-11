@@ -8,6 +8,16 @@ angular.module('client-recon.client-profile.feed', [])
     
     ClientsApi.getFeed(1,AppState.state.currentClient.client_id)
     .then(function(receivedFeed){
+
+      ClientsApi.getTickets('seattle-seahawks')
+      .then(function(data){
+        feed.subscriptions.events = data.events; //Would it 
+        console.log('FEED DATA',feed.subscriptions.events);
+      });
+
+
+
+      
       feed.loading = false;
       AppState.state.currentClient.feed = receivedFeed;
       feed.subscriptions = AppState.state.currentClient.feed;
@@ -18,7 +28,13 @@ angular.module('client-recon.client-profile.feed', [])
       feed.subscriptions.weather.main.temp = (feed.subscriptions.weather.main.temp - 273) * 1.8 + 32;
       feed.subscriptions.weather.main.convertedTemp =  feed.subscriptions.weather.main.temp.toString().split('.')[0];
       feed.subscriptions.weather.weather[0].iconUrl = 'http://openweathermap.org/img/w/' + feed.subscriptions.weather.weather[0].icon + '.png';
+
+      //should input client_interest? or client_team || whatever you want
     });
+
+
+
+
     
   });
 

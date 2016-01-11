@@ -35,10 +35,19 @@ angular.module('client-recon.services', [])
         });
     }
 
+    var getTickets = function(team) {
+      team = team.split(' ').join('-');
+      return $http.get('http://api.seatgeek.com/2/events?performers.slug=' + team)
+        .then(function(res){
+          return res.data;
+        });
+    }
+
     return {
       getAll: getAll,
       addOne: addOne,
       editOne: editOne,
-      getFeed: getFeed
+      getFeed: getFeed,
+      getTickets: getTickets
     }
   });
