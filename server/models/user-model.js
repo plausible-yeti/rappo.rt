@@ -5,7 +5,7 @@ var db = require('../../db/config.js');
 module.exports.insertUser = function(user, callback){
   console.log('in model, about to insert', user);
   console.log('query string is', queryString.insertUser);
-	var queryParameters = [user.name, user.email, user.birthday, user.company, user.zipcode, user.title, user.image];
+	var queryParameters = [user.name, user.email, user.birthday, user.company, user.zipcode, user.title, user.image, user.id]; // added last argument - RY
   console.log('query length is', queryParameters.length);
     return db.query(queryString.insertUser, queryParameters)
     .then(function(client){
