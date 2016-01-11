@@ -1,25 +1,41 @@
 
 <!-- <div ng-controller='NewClientController as newClientCtrl'> -->
-<div>
-	<form name='newClientForm'>
-		<div class='clientNameInput'>
-			<span>Name</span>
-			<input type='text' ng-model='newClientCtrl.data.name'>
+<div class="container box-style">
+	<form class="new-client-form" name='newClientForm'>
+		<div class='row client-name-input'>
+			<div class="col-sm-12">
+				<h4>Name</h4>
+				<input class="client-input" type='text' placeholder="e.g.  John Smith" ng-model='newClientCtrl.data.name'>
+			</div>
 		</div>
-		<div class='clientEmailInput'>
-			<span>Email</span>
-			<input type='text' ng-model='newClientCtrl.data.email'>
+		<div class='row client-email-input'>
+			<div class="col-sm-12">
+				<h4>Email</h4>
+				<input class="client-input" type='text' placeholder="name@company.com" ng-model='newClientCtrl.data.email'>
+			</div>
 		</div>
-		<div class='clientBirthdayInput'>
-			<span>Birthday</span>
-			<input type='date' ng-model='newClientCtrl.data.birthday'>
+		<div class='row client-company-input'>
+			<div class="col-sm-12">
+				<h4>Company</h4>
+				<input class="client-input" type='text' placeholder="Company" ng-model='newClientCtrl.data.company'>
+			</div>
 		</div>
-		<div class='clientCompanyInput'>
-			<span>Company</span>
-			<input type='text' ng-model='newClientCtrl.data.company'>
+		<div class='row client-zipcode-input'>
+			<div class="col-sm-12">
+				<h4>Zipcode</h4>
+				<input class="client-input" type='text' placeholder="e.g.  94105"ng-model='newClientCtrl.data.zipcode'>
+			</div>
 		</div>
-		<div class='clientFormSubmit'>
-			<input type='submit' ng-show='newClientForm.$valid' ng-click='newClientCtr.postClient'>
+		<div class='row client-birthday-input'>
+			<div class="col-sm-12">
+				<h4>Birthday</h4>
+				<input class="client-input" type='date' ng-model='newClientCtrl.data.birthday'>
+			</div>
+		</div>
+		<div class='row client-form-submit'>
+			<div class="col-sm-12">
+				<input class="client-input" type='submit' ng-show='newClientForm.$valid' ng-click='newClientCtr.postClient'>
+			</div>
 		</div>
 	</form>
 	<div class='successfulPostNotification' ng-show='newClientCtrl.succesfulPost'>

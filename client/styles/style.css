@@ -1,7 +1,95 @@
-.container {
-	max-width: 960px;
+body {
+	margin: 0px 0px;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	background: #f2f2f2;
+	color: rgba(0,0,0,0.7);
 }
 
+a:hover{
+	text-decoration: none;
+}
+
+nav{
+	font-weight: 300;
+	background-color: #293565;
+	letter-spacing: 0.4px;
+	-webkit-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 2px 7px 0px rgba(0,0,0,0.5);
+}
+
+.nav-bar{
+	margin: 0px auto;
+	width: 1200px;
+}
+
+.nav-bar ul{
+	text-decoration: none;
+	list-style: none;
+	margin-bottom: 0px;
+}
+
+.nav-links-list{
+	padding: 17px 30px;
+}
+
+.nav-link{
+	font-size: 1.3em;
+	padding: 10px 15px;
+	display: inline;
+}
+
+.nav-link:select{
+	text-decoration: none;
+}
+
+.nav-link a{
+	color: white;
+}
+.nav-link a:hover{
+	text-decoration: none;
+}
+
+.background-image{
+  position: fixed;
+  bottom:-80px;
+  left: 0px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.authentication{
+	text-align: right;
+}
+/* --------- DASHBOARD --------- */
+
+.container {
+	max-width: 860px;
+	margin: 25px auto;
+}
+
+.box-style{
+	background-color: white;
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.25);
+}
+
+.client-container{
+	padding: 10px 0px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.client-container:hover{
+	cursor:pointer;
+}
+
+.clientName {
+	margin-bottom: 3px;
+	font-weight: bold;
+}
+/*
 .client-container {
 	margin-left: 10px;
 	display: flex;
@@ -13,12 +101,12 @@
 	border-width:1px;
 	border-color:rgba(0,0,0,0.2);
 /*	border-style: solid;
-	border-width: 1px;*/
+	border-width: 1px;
 	padding-bottom: 5px;
 }
-
+*/
 .client-container:last-child {
-	border-bottom-style:solid;
+	border-bottom-style:none;
 	border-width:1px;
 	border-color:rgba(0,0,0,0.2);
 }
@@ -42,10 +130,97 @@
 	flex-grow: 2;
 }
 
-.clientName {
-	font-weight:bold;
+/* --------- NEW CLIENT --------- */
 
+.new-client-form{
+	padding: 10px;
+	text-align: center;
 }
-body {
-	background-color: #f5f8fa;;
+
+.client-input{
+	margin-bottom: 7px;
+	width: 45%;
+	height: 2.5em;
+	padding: 10px;
+	font-size: 1.1em;
 }
+
+.client-form-submit{
+	margin-top: 15px;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+.client-form-submit input{
+	background-color: rgba(66,136,204,0.9);
+	color: white;
+	border: none;
+}
+
+.client-form-submit input:hover{
+	background-color: rgba(66,136,204,1);
+}
+
+
+/* --------- CLIENT PROFILE.BIO VIEW --------- */
+
+.profile-container{
+	max-width: 1100px;
+	margin: 25px auto;
+}
+
+.bio{
+	margin-right: 10px;
+	padding: 0px;
+}
+
+.color-block {
+	padding: 0px;
+	height: 95px;
+	width: 100%;
+	background-color: rgba(41, 53, 101,0.8);
+}
+
+.bio-container{
+	padding: 15px 15px 0px 15px;
+	position: relative;
+}
+
+.bio-image{
+	margin: -50px 0px 0px 8px;
+	background-color: white;
+}
+
+.bio-profile-main-info{
+	position: absolute;
+	top: 5px;
+	left: 135px;
+}
+
+.bio-name{
+	margin-bottom:2px;
+}
+
+.bio-profile-details{
+	list-style: none;
+	padding: 15px 12px 5px 5px;
+}
+
+.edit-bio{
+	margin: 0px auto;
+	border-top: 1px solid rgba(0,0,0,0.1);
+	width: 90%;
+	padding: 10px;
+	text-align: center;
+	font-weight: 400;
+}
+
+.authentication {
+	margin-top: 5px;
+}
+
+
+/* --------- CLIENT PROFILE.BIO VIEW --------- */
+
+
+

@@ -1,10 +1,20 @@
+<div class="color-block">
+</div>
 <div class="bio-container">
-  <h3 class="bio-name"> {{ bio.data.currentClient.client_name }} </h3>
-  <ul>
-    <li class="bio-list-item"> Location {{bio.data.currentClient.zipcode}} </li>
+  <img class='clientImage bio-image' src='https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/3/005/03e/23d/1878a7c.jpg'></img>
+  <div class="bio-profile-main-info">
+    <h4 class="bio-name"> {{ bio.data.currentClient.client_name }} </h4>
+    <!-- change the a here -->
+    <a href="mailto:alan@gmail.com" class="bio-email">alan@gmail.com</a>
+  </div>
+  <ul class="bio-profile-details">
+    <li class="bio-list-item"> Location: {{bio.data.currentClient.zipcode}} </li>
     <li class="bio-list-item"> Birthday: {{bio.data.currentClient.birthday}} </li>
     <li class="bio-list-item"> Company: {{bio.data.currentClient.company}}
     <!--Add list items here as more things populate -->
   </ul>
+  
+</div>
+<div class="edit-bio">
   <a ui-sref="new-client">Edit</a>
 </div>
