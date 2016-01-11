@@ -3,12 +3,11 @@
 <div class="bio-container">
   <img class='clientImage bio-image' src='{{bio.data.currentClient.client_image}}'></img>
   <div class="bio-profile-main-info">
-    <h4 class="bio-name"> {{ bio.data.currentClient.client_name }} </h4>
+    <h5 class="bio-name"> {{ bio.data.currentClient.client_name }} </h5>
     <!-- change the a here -->
-    <a href="mailto:{{bio.data.currentClient.client_email}}" class="bio-email">{{bio.data.currentClient.client_email}}</a>
   </div>
   <ul class="bio-profile-details">
-    
+    <li class="bio-list-item"><a href="mailto:{{bio.data.currentClient.client_email}}" class="bio-email">{{bio.data.currentClient.client_email}}</a></li>
     <li class="bio-list-item"> Company: {{bio.data.currentClient.client_company}} </li>
     <li class="bio-list-item"> Title: {{bio.data.currentClient.client_title}} </li>
     <li class="bio-list-item"> Location: {{bio.data.currentClient.client_zipcode}} </li>
