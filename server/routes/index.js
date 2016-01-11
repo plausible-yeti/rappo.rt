@@ -29,6 +29,11 @@ module.exports = function(app, express) {
 
 	// ROUTE FOR GETTING FEED FOR A PARTICULAR CLIENT
 	app.get('/api/users/:user_id/clients/:client_id/feed', function(req,res){
-		controller.feed.get(req,res);
+		// SOMEHOW GET THE CLIENT RECORD FROM CLIENT DATABASE
+		// LOOK AT THE COLUMNS IN THE CLIENT RECORD, CREATE A PARAMS OBJECT BASED ON THAT
+		// SEND THAT TO CONTROLLER.FEED.GET
+		// PARAMS OBJ: {'client_company':'Togos', 'client_zipcode':'94303'}
+
+		controller.feed.getOneClient(req,res);
 	})
 };

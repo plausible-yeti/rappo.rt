@@ -41,6 +41,14 @@ var Client = function () {
         throw new Error('There was a problem updating the record', err);
       })
   }
+
+  this.getOne = function(clientId,callback){
+  // TO DO REFACTOR LATER
+  return db.query('Select * from clients where client_id = $1', [clientId])
+    .then(function(result){
+      callback(result);
+    })
+  }
 };
 
 module.exports = new Client();
