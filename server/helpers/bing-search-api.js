@@ -18,7 +18,7 @@ module.exports = function(queryStr, callback){
 	    // newsLocationOverride: "US.WA" // Only for en-US market
 	  }, function(error, res, body){
 	  	if(error){
-	  		console.log('ERROR!')
+	  		console.log('Bing Error',error)
 	  	} else {
 	  		callback(body);
 	  	}

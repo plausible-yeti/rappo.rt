@@ -4,6 +4,7 @@ var bingApi = require('../helpers/bing-search-api.js')
 var weatherApi = require('../helpers/weather-api.js')
 var Client = require('../models').Client;
 var moment = require('moment');
+var getBirthdayMessage = require('../helpers/birthdateCalc.js');
 
 module.exports = {
   // FOR TESTING DELETE THIS LATER
@@ -27,9 +28,6 @@ module.exports = {
   	})
 
   },
-  getBirthdayMessage: function(eventDate){
-    return 'birthday is in ' + moment(eventDate).year(moment(Date.now()).year()).fromNow();
-  },
   get:function(req, res, params, callback) {
       var feedResults = {};
       var zipcode = params[0].client_zipcode;
@@ -41,7 +39,7 @@ module.exports = {
           feedResults.weather = weatherResults;
           ;
           // feedResults.message
-          feedResults.message = params[0].client_name+"'s "+ module.exports.getBirthdayMessage(params[0].client_birthday) +'. Think about '
+          feedResults.message = params[0].client_name+"'s birthday is "+ getBirthdayMessage(params[0].client_birthday) +'! Think about '
           + 'how you can make their day special.'
           res.json(feedResults);
         });
