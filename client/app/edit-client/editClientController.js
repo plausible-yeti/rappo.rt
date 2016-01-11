@@ -1,5 +1,5 @@
 angular.module('client-recon.edit-client', [])
-.controller('EditClientController', function ($scope, $timeout, ClientsApi, AppState) {
+.controller('EditClientController', function ($scope, $timeout, ClientsApi, AppState, $state) {
   // TEMPLATE FOR DATA
   this.data = AppState.state;
   var successfulPost = this.success;

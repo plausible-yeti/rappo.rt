@@ -9,7 +9,9 @@ angular.module('client-recon.dashboard', [])
   var initializeClients = function () {
     ClientsApi.getAll(1)
       .then(function (clients) {
-        console.log(clients);
+        clients.map(function(client){
+          client.client_birthday = client.client_birthday.slice(0,10);
+        });
         dashboard.data.clients = clients;
       })
       .catch(function (error) {
@@ -22,6 +24,10 @@ angular.module('client-recon.dashboard', [])
     AppState.state.currentClient = dashboard.currentClient;
     console.log(AppState.state.currentClient);
     $state.go('client-profile.bio');
+  }
+
+  dashboard.addNew = function(index) {
+    $state.go('new-client');
   }
 
   initializeClients();

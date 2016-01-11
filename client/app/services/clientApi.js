@@ -21,7 +21,7 @@ angular.module('client-recon.services', [])
 
     var editOne = function(user_id, editedClient){
       //currently user is hard coded
-      return $http.put('/api/users/' + 1 + '/clients/' + editedClient.client_id, editedClient)
+      return $http.put('/api/users/' + user_id + '/clients/' + editedClient.client_id, editedClient)
         .then(function(res){
           return res.data;
         });
@@ -29,7 +29,7 @@ angular.module('client-recon.services', [])
 
     var getFeed = function(user_id, client_id) {
       //currently user is hard coded
-      return $http.get('/api/users/' + 1 + '/clients/' + user_id + '/feed')
+      return $http.get('/api/users/' + user_id + '/clients/' + user_id + '/feed')
         .then(function(res){
           return res.data;
         });
