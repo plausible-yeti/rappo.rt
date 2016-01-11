@@ -11,6 +11,7 @@ a:hover{
 }
 
 nav{
+	background-color: rgba(0,0,0,0.5);
 	font-weight: 300;
 	background-color: #293565;
 	letter-spacing: 0.4px;
@@ -180,6 +181,10 @@ nav{
 	width: 100%;
 	background-color: rgba(41, 53, 101,0.8);
 }
+
+
+/* orange: rgba(255, 63, 13,0.6)*/
+/* slate-blue: rgba(41, 53, 101,0.8)*/
 
 .bio-container{
 	padding: 15px 15px 0px 15px;

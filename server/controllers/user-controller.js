@@ -5,10 +5,10 @@ module.exports.post = function(req, res) {
 			// This is where we call the DB function for creating new user
 			// TO DO: Make sure you send a response
 			// Love your comments Rebecca!
-			console.log('in controller, body is', req.body);
-			console.log('data is', req.data);
+			var salesID = req.params.user_id;
+			console.log('in controller, SALES ID is', salesID);
 			
-			userModel.insertUser(req.body, function(user) {
+			userModel.insertUser(req.body, salesID, function(user) {
 				res.send(201, user);
 			});
 

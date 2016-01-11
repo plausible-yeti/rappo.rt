@@ -9,7 +9,7 @@ angular.module('client-recon', [
 'client-recon.client-profile.bio',
 'client-recon.new-client',
 'client-recon.client-profile.feed',
-
+'client-recon.edit-client'
 ])
 .config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
  $urlRouterProvider.otherwise('/');
@@ -46,6 +46,12 @@ angular.module('client-recon', [
     templateUrl: 'app/new-client/new-client.html',
     controllerAs: 'newClientCtrl',
     controller: 'NewClientController'
+   })
+   .state('edit-client', {
+    url: '/edit-client',
+    templateUrl: 'app/edit-client/edit-client.html',
+    controllerAs:'editClientCtrl',
+    controller: 'EditClientController'
    });
 
  });

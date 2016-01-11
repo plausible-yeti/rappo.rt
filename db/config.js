@@ -1,5 +1,6 @@
 //create connection here
-var pgp = require('pg-promise')();
+var bluebird = require('bluebird');
+var pgp = require('pg-promise')({promiseLib: bluebird});
 var connectionString = process.env.DATABASE_URL||"postgres://localhost:5432/recon";
 
 //create new db instance
