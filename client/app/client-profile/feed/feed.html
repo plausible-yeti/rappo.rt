@@ -1,8 +1,27 @@
-<div class='box style'>
-  <div class='client-container row' ng-repeat='feedEntry in dashboard.data.feed'>
-
+<div class='article-container'>
+  <div class='client-container row ng-hide=true'>
+    <div class="col-sm-12">
+      <h4 class="feed-headline">Upcoming:<h4>
+        <h5>{{feed.fakeFeedData.message}}<h5>
+    </div>
+  </div>  
+  <div class='client-container row'>
+    <div class='col-sm-12'>
+      <h4 class="feed-headline">Weather in {{feed.fakeFeedData.weather.name}}:</h4>
+      <img src="{{feed.fakeFeedData.weather.weather[0].iconUrl}}"></img>{{feed.fakeFeedData.weather.main.convertedTemp}} F, {{feed.fakeFeedData.weather.weather[0].description}}
+    </div>
+  </div>
+  <div class='client-container row'>
+    <div class="col-sm-12">
+      <h4 class="feed-headline">Company News:<h4>
+      <div class="row">
+        <div ng-repeat="article in feed.fakeFeedData.news" class="col-sm-12 article">
+          <a href="{{article.Url}}" target="_blank" "class="article-headline">{{article.Title}}</a>
+          <p class="article-description">{{article.Description}}</p>
+        </div>
+      </div>  
+    </div>
   </div>
 
 
 </div>
-
