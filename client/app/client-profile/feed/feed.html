@@ -1,27 +1,30 @@
+<div class="loading-gif" ng-show=feed.loading>
+  <img src="assets/loading.gif"></img>
+</div>
+<div class="col-sm-8 box-style" ng-show=!feed.loading>
 <div class='article-container'>
-  <div class='client-container row ng-hide=true'>
+  <div class='client-container row'>
     <div class="col-sm-12">
       <h4 class="feed-headline">Upcoming:<h4>
-        <h5>{{feed.fakeFeedData.message}}<h5>
+        <h5>{{feed.subscriptions.message}}<h5>
     </div>
-  </div>  
-  <div class='client-container row'>
+  </div>
+  <div class='client-container row' ng-show=feed.weatherShow>
     <div class='col-sm-12'>
-      <h4 class="feed-headline">Weather in {{feed.fakeFeedData.weather.name}}:</h4>
-      <img src="{{feed.fakeFeedData.weather.weather[0].iconUrl}}"></img>{{feed.fakeFeedData.weather.main.convertedTemp}} F, {{feed.fakeFeedData.weather.weather[0].description}}
+      <h4 class="feed-headline">Weather in {{feed.subscriptions.weather.name}}:</h4>
+      <img src="{{feed.subscriptions.weather.weather[0].iconUrl}}"></img>{{feed.subscriptions.weather.main.convertedTemp}} F, {{feed.subscriptions.weather.weather[0].description}}
     </div>
   </div>
   <div class='client-container row'>
     <div class="col-sm-12">
       <h4 class="feed-headline">Company News:<h4>
       <div class="row">
-        <div ng-repeat="article in feed.fakeFeedData.news" class="col-sm-12 article">
-          <a href="{{article.Url}}" target="_blank" "class="article-headline">{{article.Title}}</a>
+        <div ng-repeat="article in feed.subscriptions.bing" class="col-sm-12 article">
+          <a href="{{article.Url}}" target="_blank" class="article-headline">{{article.Title}}</a>
           <p class="article-description">{{article.Description}}</p>
         </div>
       </div>  
     </div>
   </div>
-
-
+</div>
 </div>

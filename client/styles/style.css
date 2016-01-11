@@ -98,6 +98,10 @@ link:active, link:visited{
 	margin-bottom: 3px;
 	font-weight: bold;
 }
+
+.clientEmail {
+	display: inline;
+}
 /*
 .client-container {
 	margin-left: 10px;
@@ -239,6 +243,9 @@ link:active, link:visited{
 	background-color: white;
 }
 
+.loading-gif{
+	text-align: center;
+}
 
 .article{
 	padding: 10px 20px;
