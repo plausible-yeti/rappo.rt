@@ -12,10 +12,14 @@ var url = 'https://api.twilio.com/2010-04-01/Accounts/'+ appId +'/Messages.json'
 
 function sendMessage (opts) {
   var date = moment(opts.eventDate).year(moment(Date.now()).year()).fromNow();
-  var msg = opts.recipient +"'s " +
-    opts.eventName + " is coming up " +
-    date + ". Be the best part of the day with one of these ideas!";
+  // var msg = opts.recipient +"'s " +
+  //   opts.eventName + " is coming up " +
+  //   date + ". Be the best part of the day with one of these ideas!";
 
+  // HARD CODED FOR PRESENTATION
+  var msg = 'You just added ' + opts.recipient + ' from '
+  + opts.company +'! Look out for notifications that will'
+  + ' help you grow your relationship.';
   var options = {
     method: 'POST',
     uri: url,
@@ -35,7 +39,7 @@ function sendMessage (opts) {
   rp(options)
       .then(function (body) {
           var result = JSON.parse(body);
-          console.log(result);
+          //console.log(result);
           return result;
       })
       .catch(function (err) {
