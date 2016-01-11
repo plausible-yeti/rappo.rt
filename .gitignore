@@ -7,3 +7,5 @@ node_modules/*
 
 /server/helpers/bing-search-api-key.js
 /server/helpers/weather-api-key.js
+
+keys.sh

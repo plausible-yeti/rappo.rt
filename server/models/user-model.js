@@ -30,6 +30,14 @@ module.exports.insertUser = function(user, salesId, callback){
       return error;
     });
 
+module.exports.getOneUser = function(userId, callback){
+  // TO DO REFACTOR LATER
+  return db.query('Select * from users where user__id = $1', [userId])
+    .then(function(result){
+      console.log(result)
+    })
+}
+
 //     db.tx(function (t) {
 //     // t = this; 
 //     // creating a sequence of transaction queries: 
