@@ -37,13 +37,13 @@ nav{
 }
 
 .nav-link{
-	font-family: 'Font-Awesome', 'Lato', sans-serif;
+	font-family: 'Courgette', 'Lato', sans-serif;
 	font-size: 1.8em;
-	padding: 5px 15px;
+	padding: 0px 15px;
 	display: inline;
 }
 
-.nav-link:select{
+link:active, link:visited{
 	text-decoration: none;
 }
 
