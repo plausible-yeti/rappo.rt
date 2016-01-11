@@ -3,5 +3,6 @@
 module.exports = {
   // user: require('./user-model'),
   Client: require('./client-model'),
-  user: require('./user-model')
+  user: require('./user-model'),
+  subscription: require('./subscription-model')
 };

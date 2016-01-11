@@ -18,10 +18,22 @@ db.query("CREATE TABLE IF NOT EXISTS salespersons (salesperson_name VARCHAR(40),
  })
  .then(function(){
    console.log('clients created');
-   return db.query("CREATE TABLE IF NOT EXISTS clients_salespersons (salesperson_id int NOT NULL, client_id int NOT NULL, PRIMARY KEY (salesperson_id,client_id), FOREIGN KEY (salesperson_id) REFERENCES salespersons(salesperson_id), FOREIGN KEY (client_id) REFERENCES clients(client_id));")
+
+   return db.query("CREATE TABLE IF NOT EXISTS clients_salespersons (salesperson_id int NOT NULL, client_id int NOT NULL, PRIMARY KEY (salesperson_id,client_id),"
+   + " FOREIGN KEY (salesperson_id) REFERENCES salespersons(salesperson_id), FOREIGN KEY (client_id) REFERENCES clients(client_id));");
  })
  .then(function(){
    console.log('user client join created');
+   return db.query("CREATE TABLE IF NOT EXISTS subscriptions (subscription_id SERIAL PRIMARY KEY, subscription_type VARCHAR(40),"
+    + " subscription_name VARCHAR(1000))");
+ })
+ .then(function(){
+  console.log('subscription table created')
+  return db.query("CREATE TABLE IF NOT EXISTS subscriptions_clients (subscription_id int NOT NULL, client_id int NOT NULL, FOREIGN KEY (subscription_id)" 
+    + " REFERENCES salespersons(salesperson_id), FOREIGN KEY (client_id) REFERENCES clients(client_id));");
+ })
+ .then(function(){
+  console.log('subscription client join created')
  })
 .catch(function(error){
   console.log('error creating tables');
