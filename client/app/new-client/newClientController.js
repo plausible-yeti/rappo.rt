@@ -3,7 +3,7 @@
 
 
 angular.module('client-recon.new-client', [])
-.controller('NewClientController', function ($scope, $timeout, ClientsApi, AppState) {
+.controller('NewClientController', function ($scope, $timeout, ClientsApi, AppState, $state) {
   // TEMPLATE FOR DATA
   this.data = {
     name:'',
@@ -18,8 +18,9 @@ angular.module('client-recon.new-client', [])
 
   this.postClient = function () {
     //DETECT USER ID FROM APP STATE
-    ClientsApi.addOne( 1,newClient).then(function(res){
+    ClientsApi.addOne(1,newClient).then(function(res){
       // CALLED AFTER SUCCESSFUL POST
+      console.log(res);
       successfulPost = true;
       newClient.name = '';
       newClient.email = '';
@@ -30,6 +31,7 @@ angular.module('client-recon.new-client', [])
       // NOTIFICATION ONLY SHOW FOR A FEW SECONDS AND DISAPPEAR
       $timeout(function(){
         successfulPost = false;
+        $state.go('dashboard');
       }, 2000);
 
     })
