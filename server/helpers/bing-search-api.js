@@ -1,4 +1,5 @@
-var accountKey = require('./bing-search-api-key.js')
+// var accountKey = require('./bing-search-api-key.js')
+var accountKey = process.env.BING_NEWS_API
 var Bing = require('node-bing-api')({ accKey: accountKey });
 
 module.exports = function(queryStr, callback){
