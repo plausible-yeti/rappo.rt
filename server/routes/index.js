@@ -10,7 +10,7 @@ module.exports = function(app, express) {
 	});
 
 	// ROUTE FOR CREATING A NEW USER
-	app.post('/api/users', function(req,res){
+	app.post('/api/users/:user_id/clients', function(req,res){
 		 controller.user.post(req,res);
 	});
 
@@ -20,9 +20,9 @@ module.exports = function(app, express) {
 	})
 
 	// ROUTE FOR CREATING A NEW CLIENT
-	app.post('/api/users/:user_id/clients', function(req,res){
-		controller.client.post(req,res);
-	})
+	// app.post('/api/users/:user_id/clients', function(req,res){
+	// 	controller.client.post(req,res);
+	// })
 
   // ROUTE FOR UPDATING A CLIENT
 	app.put('/api/users/:user_id/clients/:client_id', controller.client.put);
