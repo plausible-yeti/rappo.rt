@@ -1,33 +1,29 @@
-var moment = require('moment-timezone');
+# Rappo.rt #
+ 
+## Rappo.rt ##
+  > Build better relationships
+
+## Sub-Heading ##
+  > Rappo.rt helps account management professionals cultivate important client relationships.
+
+## Summary ##
+  > Give us information you know about your client. Receive notifications at important moments (e.g. birthday) with ideas about how to grow the relationship. Check your client's feed to find curated content based on the information you've given us. Store all of your client information in one convenient platform. 
 
 
-module.exports = function(date){
-	var birthday = date;
+## Problem ##
+  > Building relationships with important clients can be hard. Remembering interesting tidbits and important dates is often highly labor intensive.
 
-	var todayMonth = moment.tz(Date.now(),"America/Los_Angeles").month();
-	var todayDay = moment.tz(Date.now(),"America/Los_Angeles").date();
-	var eventDateMonth = moment.tz(birthday, "America/Los_Angeles").month();
-	var eventDateDay = moment.tz(birthday, "America/Los_Angeles").date()+1;
+## Solution ##
+  > Rappo.rt helps you remember important information about your client. Get reminders to send your client a token of appreciation on their birthday. Check your client's feed for interesting conversation topics to bring up during your next meeting. Find new ways to connect and strengthen your relationship.
 
-	console.log('todayMonth, todayDay, eventDateMonth, eventDateDay')
-	console.log(todayMonth, todayDay, eventDateMonth, eventDateDay)
+## Quote from  ##
+  > "By using Rappo.rt salespeople and account managers are able to make meaningful connections with with their clients." - Stephen Saunders, Founder
 
-	// Check if month is in past, same, future
-	if(eventDateMonth < todayMonth){
-		return moment.tz(birthday, "America/Los_Angeles").year(moment.tz(Date.now(),"America/Los_Angeles").year()+1).fromNow();
+## How to Get Started ##
+  > Our UI is incredibly simple. Add clients and tell us what you know about them. We do the rest of the work.
 
-	} else if (eventDateMonth === todayMonth){
-		if(eventDateDay < todayDay){
-		return moment.tz(birthday, "America/Los_Angeles").year(moment.tz(Date.now(),"America/Los_Angeles").year()+1).fromNow();	
+## Customer Quote ##
+  > "They say it's harder to fire a friend than a company. Rappo.rt has elevated our field agents from company reps to friends." - Dottie Christensen, VP of Sales, Hoo.li
 
-		} else if (eventDateDay === todayDay){
-		return 'today'
-		} else if (eventDateDay > todayDay){
-		return moment.tz(birthday, "America/Los_Angeles").year(moment.tz(Date.now(),"America/Los_Angeles").year()).fromNow();
-		}
-	} else if (eventDateMonth > todayMonth){
-		return moment.tz(birthday, "America/Los_Angeles").year(moment.tz(Date.now(),"America/Los_Angeles").year()).fromNow();
-
-	}
-}
-
+## Closing and Call to Action ##
+  > Be a friend. Sign up today!
