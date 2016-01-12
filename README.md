@@ -25,7 +25,7 @@ Sales and account management relationship augmentation engine
 ```json
 {
   "client_name": "string",
-  "client_email": "string"
+  "client_email": "string",
   "client_birthday": "string"
   "client_company": "string"
   "client_zipcode": "string"
