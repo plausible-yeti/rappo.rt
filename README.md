@@ -26,10 +26,10 @@ Sales and account management relationship augmentation engine
 {
   "client_name": "string",
   "client_email": "string",
-  "client_birthday": "string"
-  "client_company": "string"
-  "client_zipcode": "string"
-  "client_title": "string"
+  "client_birthday": "string",
+  "client_company": "string",
+  "client_zipcode": "string",
+  "client_title": "string",
   "client_image": "string"
 }
 ```
