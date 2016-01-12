@@ -17,7 +17,7 @@
   > Rappo.rt helps you remember important information about your client. Get reminders to send your client a token of appreciation on their birthday. Check your client's feed for interesting conversation topics to bring up during your next meeting. Find new ways to connect and strengthen your relationship.
 
 ## Quote from  ##
-  > "By using Rappo.rt salespeople and account managers are able to make meaningful connections with with their clients." - Stephen Saunders, Founder
+  > "By using Rappo.rt salespeople and account managers are able to make meaningful connections with their clients." - Stephen Saunders, Founder
 
 ## How to Get Started ##
   > Our UI is incredibly simple. Add clients and tell us what you know about them. We do the rest of the work.
