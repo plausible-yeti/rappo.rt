@@ -6,7 +6,6 @@ var helpers = require('../helpers');
 module.exports = function(app, express) {
 	// ROUTE FOR RESETTING DB WITH DEMO DATA
 	app.get('/api/resetDBWithData', function(req, res){
-		controller.client.reset();
 		controller.user.reset();
 		res.send('success');
 	});

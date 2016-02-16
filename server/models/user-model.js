@@ -8,7 +8,7 @@ module.exports.insertUser = function(user, salesId, callback){
 	var queryParameters = [user.client_name, user.client_email, user.client_birthday, user.client_company, user.client_zipcode, user.client_title, user.client_image]; // added last argument - RY
   console.log('query length is', queryParameters);
     return db.query(queryString.insertUser, queryParameters)
-    // .then(function(client){ 
+    // .then(function(client){
     //   // console.log('inserted client is', client[0]);
     //   // clientId = client[0].client_id;
     //   //return callback(201, clientId);
@@ -29,6 +29,7 @@ module.exports.insertUser = function(user, salesId, callback){
       return callback(error, null);
       return error;
     });
+  };
 
 module.exports.getOneUser = function(userId, callback){
   // TO DO REFACTOR LATER
@@ -36,23 +37,28 @@ module.exports.getOneUser = function(userId, callback){
     .then(function(result){
       console.log(result)
     })
-}
+};
+
+module.exports.reset = function() {
+  console.log('getting here');
+  return db.query(queryString.reset);
+};
 
 //     db.tx(function (t) {
-//     // t = this; 
-//     // creating a sequence of transaction queries: 
+//     // t = this;
+//     // creating a sequence of transaction queries:
 //     var q1 = t.one(queryString.insertUser, queryParameters);
 //     var q2 = t.one("insert into audit(entity, id) values($1, $2) returning id",
 //         ['users', 123]);
- 
-//     // returning a promise that determines a successful transaction: 
-//     return this.batch([q1, q2]); // all of the queries are to be resolved; 
+
+//     // returning a promise that determines a successful transaction:
+//     return this.batch([q1, q2]); // all of the queries are to be resolved;
 // })
 //     .then(function (data) {
-//         console.log(data); // printing successful transaction output; 
+//         console.log(data); // printing successful transaction output;
 //     })
 //     .catch(function (error) {
-//         console.log(error); // printing the error; 
+//         console.log(error); // printing the error;
 //     });
 
 
@@ -67,5 +73,3 @@ module.exports.getOneUser = function(userId, callback){
 // 					cb(result);
 // 				}
 // 	})
-		
-}
