@@ -4,6 +4,12 @@ var controller = require('../controllers');
 var helpers = require('../helpers');
 
 module.exports = function(app, express) {
+	// ROUTE FOR RESETTING DB WITH DEMO DATA
+	app.get('/api/resetDBWithData', function(req, res){
+		controller.user.reset();
+		res.send('success');
+	});
+
 	// ROUTE FOR DISPLAYING DASHBOARD
 	app.get('/api/users/:user_id/clients', function(req,res){
 		controller.dashboard.get(req,res);
@@ -17,7 +23,7 @@ module.exports = function(app, express) {
 	// ROUTE FOR DISPLAYING PARTICULAR CLIENT
 	app.get('/api/users/:user_id/clients/:client_id', function(req,res){
 		controller.client.get(req,res);
-	})
+	});
 
 	// ROUTE FOR CREATING A NEW CLIENT
 	// app.post('/api/users/:user_id/clients', function(req,res){
