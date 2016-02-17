@@ -54,6 +54,7 @@ link:active, link:visited{
 }
 
 .background-image{
+	display: none;
   position: fixed;
   bottom:-80px;
   left: 0px;
@@ -259,5 +260,3 @@ link:active, link:visited{
 .article-description{
 	font-size: 0.8em;
 }
-
-
