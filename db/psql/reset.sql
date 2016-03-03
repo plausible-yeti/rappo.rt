@@ -40,13 +40,13 @@ INSERT INTO salespersons (salesperson_name)
   VALUES ('Alan Fu');
 
 INSERT INTO clients (client_name, client_title, client_email, client_zipcode, client_birthday, client_image, client_company)
-  VALUES ('Harun Davood', 'Software Engineer 3', 'harun@microsoft.com', '94301','1990-02-27','http://bit.ly/1PXWFwh' ,'Microsoft');
+  VALUES ('Harun Davood', 'Software Engineer 3', 'harun@microsoft.com', '94301','1990-02-27','http://bit.ly/1QlKxSA' ,'Microsoft');
 
 INSERT INTO clients (client_name, client_title, client_email, client_zipcode, client_birthday, client_image, client_company)
-  VALUES ('Rachel Rose Figura', 'CPO', 'rrose@23andme.com', '94035','1985-03-11','http://bit.ly/1SQ3sL2' ,'23andMe');
+  VALUES ('Rachel Rose Figura', 'CPO', 'rrose@23andme.com', '94035','1985-03-11','http://bit.ly/1RqzXJL' ,'23andMe');
 
 INSERT INTO clients (client_name, client_title, client_email, client_zipcode, client_birthday, client_image, client_company)
-  VALUES ('Ryan Wholey', 'Senior DevOps', 'ryanwholey@hooli.com', '94132', '1988-08-01','http://bit.ly/1QiCPHN','Hooli');
+  VALUES ('Ryan Wholey', 'Senior DevOps', 'ryanwholey@hooli.com', '94132', '1988-08-01','http://bit.ly/21EXVMb','Hooli');
 
 INSERT INTO clients_salespersons (salesperson_id, client_id)
   VALUES (1,1);
