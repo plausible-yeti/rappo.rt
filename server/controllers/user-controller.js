@@ -28,6 +28,20 @@ module.exports.post = function(req, res) {
 				twilio(message);
 			});
 
-		};
-	
+	userModel.insertUser(req.body, salesID, function(user) {
+		res.send(201, user);
+		var message = {};
+		console.log('req.body is', req.body);
+		message.recipient = req.body.client_name;
+		message.company = req.body.client_company;
+		console.log('about to send this to twilio:', message)
+		// message.event = "You just added" + message.recipient
+		console.log('user is inserted, req.body is:', req.body);
+		twilio(message);
+	});
+};
 
+module.exports.reset = function() {
+	console.log('usermodel',userModel);
+	return userModel.reset();
+};
