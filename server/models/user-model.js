@@ -5,7 +5,7 @@ var db = require('../../db/config.js');
 module.exports.insertUser = function(user, salesId, callback){
   console.log('in model, about to insert', user);
   console.log('query string is', queryString.insertUser);
-	var queryParameters = [user.client_name, user.client_email, user.client_birthday, user.client_company, user.client_zipcode, user.client_title, user.client_image]; // added last argument - RY
+  var queryParameters = [user.client_name, user.client_email, user.client_birthday, user.client_company, user.client_zipcode, user.client_title, user.client_image]; // added last argument - RY
   console.log('query length is', queryParameters);
     return db.query(queryString.insertUser, queryParameters)
     // .then(function(client){
@@ -64,12 +64,12 @@ module.exports.reset = function() {
 
 // exports.insertUser = function(user, cb) {
 
-// 	var queryString = require('load')
-// 	var queryParameters = [user.name, user.email, user.birthday, user.company, user.zipcode, user.title];
-// 	db.insertUser(queryParameters, function(err, result) {
-// 		if(err){
-// 					throw err;
-// 				} else {
-// 					cb(result);
-// 				}
-// 	})
+//  var queryString = require('load')
+//  var queryParameters = [user.name, user.email, user.birthday, user.company, user.zipcode, user.title];
+//  db.insertUser(queryParameters, function(err, result) {
+//    if(err){
+//          throw err;
+//        } else {
+//          cb(result);
+//        }
+//  })
